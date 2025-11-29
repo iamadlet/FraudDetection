@@ -5,6 +5,6 @@ final class AppServices {
     private init() {}
     
     let authService = AuthService()
-    let transactionService = MockTransactionService()
-//    let transactionService = TransactionService(authTokenProvider: { KeychainManager.instance.getToken(forKey: "token") })
+//    let transactionService = MockTransactionService()
+    let transactionService = TransactionService(authTokenProvider: { KeychainManager.instance.getToken(forKey: "token") })
 }
